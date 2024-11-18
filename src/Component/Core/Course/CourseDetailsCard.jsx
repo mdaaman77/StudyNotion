@@ -124,4 +124,4 @@ function CourseDetailsCard({ course, setConfirmationModal, handleBuyCourse }) {
   )
 }
 
-export default CourseDetailsCard;
+export default CourseDetailsCard

@@ -45,4 +45,4 @@ function Course_Card({ course, Height }) {
   )
 }
 
-export default Course_Card;
+export default Course_Card

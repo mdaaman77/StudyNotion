@@ -33,4 +33,4 @@ const IconBtn = ({ ...btnData }) => {
   )
 }
 
-export default IconBtn;
+export default IconBtn

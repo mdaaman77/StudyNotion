@@ -98,4 +98,4 @@ const VideoDetailsSidebar = ({ setReviewModal }) => {
   )
 }
 
-export default VideoDetailsSidebar;
+export default VideoDetailsSidebar

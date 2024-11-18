@@ -44,4 +44,4 @@ const LearningLanguageSection = () => {
   )
 }
 
-export default LearningLanguageSection;
+export default LearningLanguageSection

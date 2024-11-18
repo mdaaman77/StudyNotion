@@ -39,4 +39,4 @@ export const {
   resetCourseState,
 } = courseSlice.actions
 
-export default courseSlice.reducer;
+export default courseSlice.reducer

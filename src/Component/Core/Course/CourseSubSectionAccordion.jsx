@@ -16,4 +16,4 @@ function CourseSubSectionAccordion({ subSec }) {
   )
 }
 
-export default CourseSubSectionAccordion;
+export default CourseSubSectionAccordion

@@ -279,4 +279,4 @@ function CourseDetails() {
   )
 }
 
-export default CourseDetails;
+export default CourseDetails

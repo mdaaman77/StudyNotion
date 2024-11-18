@@ -41,4 +41,4 @@ const InstructorSection = () => {
   )
 }
 
-export default InstructorSection;
+export default InstructorSection

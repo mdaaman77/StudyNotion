@@ -50,4 +50,4 @@ const ContactDetails = () => {
   )
 }
 
-export default ContactDetails;
+export default ContactDetails

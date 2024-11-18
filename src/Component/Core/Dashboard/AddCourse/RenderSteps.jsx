@@ -84,4 +84,4 @@ const RenderSteps = () => {
   )
 }
 
-export default RenderSteps;
+export default RenderSteps

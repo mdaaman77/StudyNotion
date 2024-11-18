@@ -29,4 +29,4 @@ const SidebarLink = ({ data }) => {
   )
 }
 
-export default SidebarLink;
+export default SidebarLink

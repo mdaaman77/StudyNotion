@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import sidebarLinks from '../../../Data/Sidebar-Link'
+import sidebarLinks from '../../../data/Sidebar-Link'
 import SidebarLink from './SidebarLink'
 import { VscSignOut } from 'react-icons/vsc'
 import { logout } from "../../../Service/Operation/authAPI"
@@ -72,4 +72,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar;
+export default Sidebar

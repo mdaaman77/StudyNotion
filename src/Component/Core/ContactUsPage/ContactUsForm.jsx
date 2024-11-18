@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 
-import CountryCode from "../../../Data/countrycode.json"
+import CountryCode from "../../../data/countrycode.json"
 import { apiConnector } from "../../../Service/apiConnector"
 import { contactusEndpoint } from "../../../Service/apis"
 
@@ -185,4 +185,4 @@ const ContactUsForm = () => {
   )
 }
 
-export default ContactUsForm;
+export default ContactUsForm

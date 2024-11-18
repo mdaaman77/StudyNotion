@@ -49,4 +49,4 @@ function Template({ title, description1, description2, image, formType }) {
   )
 }
 
-export default Template;
+export default Template
