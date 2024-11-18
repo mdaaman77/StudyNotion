@@ -172,7 +172,7 @@ The front end of StudyNotion is designed using Figma, a popular design tool that
 
 ## CONTRIBUTORS
 - Md Aaman
-  - GITHUB: [Hindol Roy](https://github.com/mdaaman77)
+  - GITHUB: [Md Aaman](https://github.com/mdaaman77)
 
 ## OPEN SOURCE
 
