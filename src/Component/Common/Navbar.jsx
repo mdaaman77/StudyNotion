@@ -13,7 +13,7 @@ import {
   AiOutlineLogin,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import { BiCategory, BiDetail } from "react-icons/bi";
+import { BiCategory, BiDetail } from "react-icons/bi"; 
 import { BsChevronDown } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
@@ -148,7 +148,7 @@ function Navbar() {
             </Link>
           )}
           {token === null && (
-            <Link to="/signup">
+            <Link to="/SignUp">
               <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100 uppercase">
                 Sign Up
               </button>
@@ -182,7 +182,7 @@ function Navbar() {
               )}is 
 
               {token === null && (
-                <Link to={"/signup"} onClick={() => setIsMenuModalOpen(false)}>
+                <Link to={"/SignUp"} onClick={() => setIsMenuModalOpen(false)}>
                   <div className="flex gap-x-2 items-center w-full py-2 px-3 text-richblack-100 hover:text-richblack-25 hover:bg-richblack-700 uppercase tracking-wider">
                     <AiOutlineLogin className="text-lg" />
                     Sign Up
@@ -271,7 +271,7 @@ function Navbar() {
                           <Link
                             to={`/catalog/${subLink.name
                               .split(" ")
-                              .join("-")
+                              .join("-") 
                               .toLowerCase()}`}
                             key={index}
                             onClick={() => setIsMenuModalOpen(false)}
