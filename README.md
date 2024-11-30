@@ -171,25 +171,17 @@ The front end of StudyNotion is designed using Figma, a popular design tool that
 - *MISCELLANEOUS* Access to user and course management pages.
 
 ## CONTRIBUTORS
-
-- Aritra Saha
-  - GITHUB: [Aritra Saha](https://github.com/Anonynmouscx)
-- Hindol Roy
-  - GITHUB: [Hindol Roy](https://github.com/hRJ06)
+- Md Aaman
+  - GITHUB: [Md Aaman](https://github.com/mdaaman77)
 
 ## OPEN SOURCE
 
 We welcome contributions to enhance StudyNotion. Please fork the repository, make your changes, and submit a pull request for review.
 
-## LICENSE
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
 ## CONTACT
 
 For any queries or suggestions, feel free to contact the authors:
-- Aritra Saha: [Email](mailto:aritrasoffice@gmail.com)
-- Hindol Roy: [Email](mailto:hindolroy.2306@gmail.com)
+- Md Aaman: [Email](mailto:mdaaman31241@gmail.com)
 
 ## ACKNOWLEDGEMENT
 
