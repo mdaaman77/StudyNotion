@@ -30,21 +30,14 @@ import Signup from "./pages/Signup"
 import UpdatePassword from "./pages/UpdatePassword"
 import VerifyEmail from "./pages/VerifyEmail"
 import ViewCourse from "./pages/ViewCourse"
-import { getUserDetails } from "./Service/Operation/profileAPI"
+
 import { ACCOUNT_TYPE } from "./Util/constants"
 
 function App() {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+
   const { user } = useSelector((state) => state.profile)
 
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      const token = JSON.parse(localStorage.getItem("token"))
-      dispatch(getUserDetails(token, navigate))
-    }
-
-  }, [])
+  
 
   return (
     <div className="flex min-h-screen w-screen flex-col bg-richblack-900 font-inter">

@@ -59,14 +59,14 @@ const Sidebar = () => {
             className='flex gap-x-2 items-center text-sm font-medium px-3 md:px-8 py-2 text-richblack-300'
           >
             <VscSignOut className='text-lg' />
-            <span className='hidden md:block tracking-wider uppercase' >Logout</span>
+            <span className='hidden md:block tracking-wider uppercase ' >Logout</span>
           </button>
         </div>
 
       </div>
 
       {
-        isModalOpen && <ConfirmationModal modalData={modalData} />
+        isModalOpen && <ConfirmationModal modalData={modalData } />
       }
     </div>
   )

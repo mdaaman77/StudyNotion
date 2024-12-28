@@ -11,17 +11,17 @@ const courseSlice = createSlice({
   name: "course",
   initialState,
   reducers: {
-    setStep: (state, action) => {
-      state.step = action.payload
+    setStep: (state, value) => {
+      state.step = value.payload
     },
-    setCourse: (state, action) => {
-      state.course = action.payload
+    setCourse: (state, value) => {
+      state.course = value.payload
     },
-    setEditCourse: (state, action) => {
-      state.editCourse = action.payload
+    setEditCourse: (state, value) => {
+      state.editCourse = value.payload
     },
-    setPaymentLoading: (state, action) => {
-      state.paymentLoading = action.payload
+    setPaymentLoading: (state, value) => {
+      state.paymentLoading = value.payload
     },
     resetCourseState: (state) => {
       state.step = 1

@@ -186,7 +186,8 @@ exports.getAllRatingDetails= async (req,res)=>{
         console.log("error on getting all rating",e);
         res.status(500).json({
             success: false,
-            message: error.message,
+            message: e
+            .message,
             
           });
 

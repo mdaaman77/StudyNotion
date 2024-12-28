@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-  user: null,
+  
+  user:localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null,
   loading: false,
 }
-
+console.log("user from local storage " , JSON.parse(localStorage.getItem('user')) );
 const profileSlice = createSlice({
   name: "profile",
   initialState: initialState,
