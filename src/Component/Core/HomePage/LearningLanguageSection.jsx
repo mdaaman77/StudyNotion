@@ -1,6 +1,6 @@
 import React from 'react'
 import HighlightText from './HighlightText'
-import CTAButton from "../../../Component/Core/HomePage/Button";
+import CTAButton from "./Button";
 import Know_your_progress from "../../../assets/images/Know_your_progress.png";
 import Compare_with_others from "../../../assets/images/Compare_with_others.svg";
 import Plan_your_lessons from "../../../assets/images/Plan_your_lessons.svg";
