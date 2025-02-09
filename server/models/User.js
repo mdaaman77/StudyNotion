@@ -38,9 +38,7 @@ const userSchema = new mongoose.Schema({
   token: {
    type:String,
   },
-  expireToken: {
-  type:Date,
-  },
+
   image: {
     type: String,
     required: true,
