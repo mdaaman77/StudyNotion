@@ -25,9 +25,9 @@ exports.updateProfile = async (req,res)=>{
       } = req.body;
 
       const user = await User.findById(userID);
-      console.log("update profile of this user ",user);
+     // console.log("update profile of this user ",user);
       const profile = await Profile.findById({_id:user.additionalDetails});
-      console.log("update profile of this profile id ",profile);
+     // console.log("update profile of this profile id ",profile);
       //update user 
       user.firstName = firstName;
       user.lastName=lastName;
@@ -42,7 +42,7 @@ exports.updateProfile = async (req,res)=>{
 
       //send updated user details
       const updatedUser= await User.findById(userID).populate("additionalDetails").exec();
-      console.log("updated user profile",updatedUser)
+   //   console.log("updated user profile",updatedUser)
       return res.json({
         success: true,
         message: "Profile updated successfully",
@@ -123,7 +123,7 @@ exports.getAllDetails = async (req,res)=>{
           const userID= req.user.id;
 
           const userDetails = await User.findById(userID).populate("additionalDetails").exec();
-          console.log("user presonal details", userDetails);
+         // console.log("user presonal details", userDetails);
         
           res.status(200).json({
             success:true,
@@ -158,7 +158,7 @@ exports.updateDisplayPicture = async (req, res) => {
         1000,
         1000
       );
-      console.log("image details ",image);
+    //  console.log("image details ",image);
       const updatedProfile = await User.findByIdAndUpdate(
         { _id: userId },
         { image: image.secure_url },

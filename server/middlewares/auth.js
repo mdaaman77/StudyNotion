@@ -15,7 +15,7 @@ try{
         
          
         // 
-         console.log("token ",token);
+         //console.log("token ",token);
 
          //verify token
         if(!token){
@@ -24,7 +24,7 @@ try{
         //verify jwt token 
         try{
             const decode = jwt.verify(token,process.env.JWT_SECRET);
-            console.log("decoded token here ",decode);
+          //  console.log("decoded token here ",decode);
             //store decode token payload in req for further use to check isStudent/Admin/Instsructor
             req.user= decode;
 

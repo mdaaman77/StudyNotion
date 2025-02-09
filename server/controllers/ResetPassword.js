@@ -1,7 +1,8 @@
 const Validator = require("email-validator");
 const User = require("../models/User");
 const mailSender = require("../utils/MailSender");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
+
 const crypto = require("crypto");
 //resetPassword generate link through token and send into mail via sendMailer function in utils folder
 
@@ -25,7 +26,7 @@ exports.resetPasswordToken = async (req, res) => {
     //generate token for user
    
     const token = crypto.randomBytes(20).toString("hex");
-    console.log("token generate for reset pss");
+   // console.log("token generate for reset pss");
 
     const updateUser = await User.findOneAndUpdate(
       { email: email },
@@ -47,7 +48,7 @@ exports.resetPasswordToken = async (req, res) => {
       "Click here for RESET YOUR PASSWORD",
       Url
     );
-    console.log(sendMail);
+    //console.log(sendMail);
 
     res.json({
       success: true,

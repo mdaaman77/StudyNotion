@@ -60,7 +60,7 @@ exports.createOrderPayment = async (req,res)=>{
       //order for course
       try {
         const order = await instance.orders.create(options);
-        console.log(order);
+        //console.log(order);
       }
       catch(e){
         console.log(e);
@@ -106,7 +106,7 @@ exports.verifyPayment = async (req,res)=>{
     .digest("hex");
     if(signature == secretKey){
       console.log("payment verified");
-      console.log("secrete key encrypted", secretKey);
+    //  console.log("secrete key encrypted", secretKey);
       
 
       //fetch userID and courseID from notes
@@ -122,7 +122,7 @@ exports.verifyPayment = async (req,res)=>{
       if(!userDetails){
         return res.status(404).json({success:false,message:"User not found"})
       }
-      console.log("userDetails after updating course", userDetails);
+     // console.log("userDetails after updating course", userDetails);
      
       //push student in course schema
       const courseDetails = await Course.findByIdAndUpdate({_id:notes.courseID},
@@ -140,9 +140,9 @@ if(!courseDetails){
   return res.status(404).json({success:false,message:"Course not found"})
 }
 
-console.log("course deatails after updating studnet",courseDetails
-)
-;
+// console.log("course deatails after updating studnet",courseDetails
+// )
+// ;
 
 
 //send mail 

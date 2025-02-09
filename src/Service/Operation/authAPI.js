@@ -6,6 +6,7 @@ import { setUser } from "../../Slice/profileSlice"
 import { apiConnector } from "../apiConnector"
 import { endpoints } from "../apis"
 
+
 const {
   SENDOTP_API,
   SIGNUP_API,
@@ -176,7 +177,7 @@ export function resetPassword(password, confirmPassword, token, navigate) {
 
 export function logout(navigate) {
   return (dispatch) => {
-    
+
     dispatch(setToken(null))
     dispatch(setUser(null))
     dispatch(resetCart())

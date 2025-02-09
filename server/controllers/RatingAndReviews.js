@@ -58,8 +58,8 @@ exports.createRatingDetails = async (req,res)=>{
              if(!courseDetails){
                 return res.status(400).json({message:"Course not found"});
              }
-             console.log("user Rating and Reivew ",ratingDetails);
-             console.log("course Rating and Reivew ",courseDetails);
+             //console.log("user Rating and Reivew ",ratingDetails);
+             //console.log("course Rating and Reivew ",courseDetails);
              
  
              //return res
@@ -123,7 +123,7 @@ exports.getAvgRating = async (req,res)=>{
                 message:"No ratings found for this course"})
           }
            
-          console.log("avgRatingDetails responose ",avgRatingDetails);
+          //console.log("avgRatingDetails responose ",avgRatingDetails);
           //return avgRatingDetails
           return res.status(200).json({
             success:true,
@@ -165,7 +165,7 @@ exports.getAllRatingDetails= async (req,res)=>{
                                                                     path:"course",
                                                                     select:"courseName"
                                                                  }).exec();
-     console.log("allRatingDetails ",allRatingDetails);
+    // console.log("allRatingDetails ",allRatingDetails);
      if(allRatingDetails.length == 0){
         return res.status(200).json({
             success:true,
@@ -219,7 +219,7 @@ exports.allRatingOfCourse=async (req,res)=>{
             ]
         }).exec();
 
-        console.log("all rating of particular course", allRating);
+       // console.log("all rating of particular course", allRating);
         if(!allRating){
             return res.status(200).json({
                 success:false,

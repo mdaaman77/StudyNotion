@@ -7,7 +7,7 @@ exports.contactUsController = async (req, res) => {
     //fetch data
     const { email, firstName, lastName, message, phoneNo, countryCode } =
       req.body;
-    console.log(req.body);
+    // console.log(req.body);
     //send email to user
     try {
       await MailSender(

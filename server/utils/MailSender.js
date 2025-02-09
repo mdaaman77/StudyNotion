@@ -20,7 +20,7 @@ let info = transporter.sendMail({
     subject:`${title}`,
     html:`${body}`,
 })
-console.log(info);
+// console.log(info);
 return info;
 
     }catch(e){

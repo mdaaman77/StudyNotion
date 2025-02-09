@@ -61,7 +61,7 @@ exports.createCourse = async (req, res) => {
 
     //check the given category is valid or not for testing purpose only
     const categoryDetails = await Category.findById(category);
-    console.log("category Details" ,categoryDetails);
+    // console.log("category Details" ,categoryDetails);
     if (!(categoryDetails)) {
       return res.status(404).json({
         success: false,
@@ -72,9 +72,9 @@ exports.createCourse = async (req, res) => {
     //check thumbnail type
     const fileType = ["jpeg","png","jpg","webp"];
 
-    console.log(thumbnail);
+    // console.log(thumbnail);
     let fetchFileType = (thumbnail.name.split(".")[1]).toLowerCase();
-    console.log(fetchFileType);
+    // console.log(fetchFileType);
     if (!fileType.includes(fetchFileType)) {
       return res.status(401).json({
         success: false,
@@ -125,7 +125,7 @@ exports.createCourse = async (req, res) => {
       },
       { new: true }
     );
-    console.log("course created Successfully but not Publish yet and updated category ",updatecategory);
+   // console.log("course created Successfully but not Publish yet and updated category ",updatecategory);
 
     res.status(200).json({
       success: true,
@@ -184,7 +184,7 @@ exports.getCourseDetails = async (req, res) => {
     //fetch couserID
     const { courseID } = req.body;
     //verify
-    console.log("courseID",courseID)
+   // console.log("courseID",courseID)
     if (!courseID) {
       return res.status(400).json({
         success: false,
@@ -232,8 +232,8 @@ exports.getCourseDetails = async (req, res) => {
 
         const totalDuration =  convertSecondsToDuration(totalDurationInSeconds);
  
-        console.log("totalDuration of a course", totalDuration);
-        console.log("course details",courseDetails);
+        //console.log("totalDuration of a course", totalDuration);
+        //console.log("course details",courseDetails);
 
         return res.status(200).json({
           success: true,
@@ -275,7 +275,7 @@ exports.getInstructorCourses = async (req, res) => {
         message: "no course publish yet by Instructor",
       });
     }
-    console.log("instructor all course", instructorAllCourse);
+   // console.log("instructor all course", instructorAllCourse);
 
     return res.status(200).json({
       success: true,
@@ -324,7 +324,7 @@ exports.getFullCourseDetails = async (req, res) => {
       userId: userId,
     });
 
-    console.log("courseProgressCount : ", courseProgressCount);
+   // console.log("courseProgressCount : ", courseProgressCount);
 
     if (!courseDetails) {
       return res.status(400).json({

@@ -23,7 +23,7 @@ exports.createSubSection =  async (req,res)=>{
 
     //upload video into cloudinay
     const responseVideo = await uploadFileOnCloudinary(videoFile,process.env.FOLDER_NAME);
-console.log("response after posting video on cloudinary",responseVideo);
+//console.log("response after posting video on cloudinary",responseVideo);
 
     //create subSection
     const subSection = await SubSection.create({
@@ -43,8 +43,8 @@ console.log("response after posting video on cloudinary",responseVideo);
 
                                     
 
-    console.log("subSection is ", subSection);
-    console.log("Section is ",updateSection);
+    // console.log("subSection is ", subSection);
+    // console.log("Section is ",updateSection);
 
 
 
@@ -91,7 +91,7 @@ exports.updateSubSection = async (req,res)=>{
         );
     }
 
-    console.log("subSection has to update", subSectionDetails);
+    //console.log("subSection has to update", subSectionDetails);
 
 
     //check if title has changed 
@@ -123,7 +123,7 @@ exports.updateSubSection = async (req,res)=>{
     //get new updated details from DB and send to res so user can see updated data
 
     const updatedSubSection = await Section.findById(sectionID).populate("subSection");
-    console.log("updated subsection section",updatedSubSection);
+  //  console.log("updated subsection section",updatedSubSection);
 
     //sent response
     res.status(200).json({

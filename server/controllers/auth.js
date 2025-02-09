@@ -5,7 +5,8 @@ const Validator = require("email-validator");
 const Profile = require("../models/Profile");
 const jwt = require("jsonwebtoken");
 const cookie = require("js-cookie");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
+
 const bcryptjs = require("bcryptjs");
 const {crypto}= require("crypto");
 require("dotenv").config();
@@ -44,9 +45,9 @@ exports.sendOTP = async (req, res) => {
       specialChars: false,
     });
     const result = await OTP.findOne({ otp: otp });
-    console.log("Result is Generate OTP Func");
-    console.log("OTP", otp);
-    console.log("Result", result);
+    // console.log("Result is Generate OTP Func");
+    // console.log("OTP", otp);
+    // console.log("Result", result);
     while (result) {
       otp = OTPGenerator.generate(6, {
         upperCaseAlphabets: false,
@@ -54,7 +55,7 @@ exports.sendOTP = async (req, res) => {
     }
     const otpPayload = { email, otp };
     const otpBody = await OTP.create(otpPayload);
-    console.log("OTP Body", otpBody);
+    // console.log("OTP Body", otpBody);
 
 
     res.status(200).json({
@@ -153,7 +154,7 @@ exports.signUp = async (req, res) => {
     }
 
     const response = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1);
-    console.log("your otp db response",response);
+    // console.log("your otp db response",response);
     if (!response.length) {
       return res.status(400).json({
         success: false,
@@ -169,7 +170,7 @@ exports.signUp = async (req, res) => {
    
     
     const hashedPassword = await  bcrypt.hash(password, 10);
-    console.log("hashed password",hashedPassword);
+    // console.log("hashed password",hashedPassword);
 
     // let approved = "";
     // approved === "Instructor" ? (approved = false) : (approved = true);
@@ -216,7 +217,7 @@ exports.login = async (req, res) => {
     //fetch data
     const { email, password } = req.body;
 
-    console.log("email and password Login", { email, password });
+    // console.log("email and password Login", { email, password });
 
     if (!email || !password) {
       console.log("Login data not proper");
@@ -241,7 +242,7 @@ exports.login = async (req, res) => {
     //if user exist check pss and generate jwt token
 
     const match = await bcrypt.compare(password, user.password);
-    console.log("password match on log in",match);
+    // console.log("password match on log in",match);
 
     let payload = {
       id: user._id,
@@ -288,7 +289,7 @@ exports.login = async (req, res) => {
 exports.changePassword = async (req, res) => {
   try {
     const userDetails = await User.findById(req.user.id);
-    console.log("user details", userDetails);
+    // console.log("user details", userDetails);
 
     const { oldPassword, newPassword } = req.body;
 
@@ -296,7 +297,7 @@ exports.changePassword = async (req, res) => {
       oldPassword,
       userDetails.password
     );
-    console.log("is password match", isPasswordMatch);
+    // console.log("is password match", isPasswordMatch);
     if (!isPasswordMatch) {
       return res.status(401)
       .json({ success: false, message: "The password is incorrect" });
@@ -320,7 +321,7 @@ exports.changePassword = async (req, res) => {
           d successfully for ${updatedUserDetails.firstName} ${updatedUserDetails.lastName}`
         )
       );
-      console.log("Email sent successfully:", emailResponse.response);
+      // console.log("Email sent successfully:", emailResponse.response);
     } catch (error) {
       console.error("Error occurred while sending email:", error);
       return res.status(500).json({

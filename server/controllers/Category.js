@@ -23,7 +23,7 @@ exports.createCategory = async (req, res) => {
       });
 
 
-      console.log(CategorysDetails);
+      // console.log(CategorysDetails);
 
       //return res
       return res.status(200).json({
@@ -75,7 +75,7 @@ exports.categoryPageDetails = async (req, res) => {
           // populate: "ratingAndReviews",
         })
         .exec();
-        console.log("select category details",selectedCategory);
+        // console.log("select category details",selectedCategory);
         
                //if category not exist
       if (!selectedCategory) {
@@ -107,7 +107,7 @@ exports.categoryPageDetails = async (req, res) => {
           match: { status: "Published" },
         })
         .exec();
-      console.log();
+      // console.log();
 
 
 
