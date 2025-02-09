@@ -40,13 +40,11 @@ const whitelist = process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN : "*";
   // ? JSON.parse(process.env.CORS_ORIGIN)
   
 
-app.use(
-  cors({
+app.use(cors({
     origin: whitelist,
-    credentials: true,
-    maxAge: 14400,
-  })
-);
+    credentials: true, 
+    maxAge: 14400
+}));
 
 // app.use(
 //   cors({
